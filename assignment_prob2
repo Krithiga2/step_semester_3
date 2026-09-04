@@ -1,0 +1,25 @@
+class Item{
+    String itemName;
+    int stock;
+    Item(String itemName, int stock){
+        this.stock=stock;
+        this.itemName=itemName;
+    }
+    void restock(int stock){
+        this.stock+=stock;
+    }
+}
+public class canteenInventory{
+    public static void main(String[] args){
+        int[] stocks={15, 40, 8, 25};
+        Item[] items={new Item("Samosa", 15),new Item("Tea Powder", 40),new Item("Bread", 8),new Item("Biscuit Packs", 25)};
+        for(int i=0;i<items.length;i++){
+             items[i].restock(20);
+            System.out.println(items[i].itemName+"|"+"final stock:"+items[i].stock+"\n");
+            
+        }
+
+    }
+
+
+}
