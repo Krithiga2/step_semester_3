@@ -42,8 +42,8 @@ class StudentMember extends LibraryMember {
 }
 public class LibraryMem {
     public static void main(String[] args) {
-        System.out.println(
-            LibraryMember.enrollBatch(new String[]{"STU1", "LB1", "STU2", " ", "STU3"},3)
+        String[] ids={"STU1","LB1","STU2"," ","STU3"};
+        System.out.println(LibraryMember.enrollBatch(ids,3));
         );
     }
 }
