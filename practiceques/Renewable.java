@@ -70,6 +70,7 @@ public class Renewable{
         m1.borrowBook();
         m1.borrowBook("Fiction");
         System.out.println(m1.getBooksBorrowed());
-        System.out.println(processNightlyAudit(new LibraryMember[]{new FacultyMember(5,"Physics"),null,new LibraryMember(3)}));
+        LibraryMember[] members={new FacultyMember(5,"Physics"),null,new LibraryMember(3)};
+        System.out.println(processNightlyAudit(members));
     }
 }
