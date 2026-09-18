@@ -66,12 +66,14 @@ public class ThreeBranch{
         StudentMember s=new StudentMember("STU2",3,"CSE");
         HonorsStudentMember h=new HonorsStudentMember("STU3",3,"ECE",2);
         FacultyMember f=new FacultyMember("STU4",5,"Physics");
-        s.borrowBook();s.borrowBook();h.borrowBook();f.borrowBook();f.borrowBook();f.borrowBook();
+        s.borrowBook();s.borrowBook();h.borrowBook();
+        f.borrowBook();f.borrowBook();f.borrowBook();
         System.out.println(s.displayInfo());
         System.out.println(h.displayInfo());
         System.out.println(f.displayInfo());
         System.out.println(classifyGeneration(h));
         System.out.println(classifyGeneration(f));
-        System.out.println(getTotalBooksBorrowed(new LibraryMember[]{s,h,f}));
+        LibraryMember[] members={s,h,f};
+        System.out.println(getTotalBooksBorrowed(members));
     }
 }
